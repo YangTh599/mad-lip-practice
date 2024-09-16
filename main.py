@@ -5,7 +5,7 @@
 #Greetings list
 greetings = ["Ahola ", "Bonjour ", "Ciao ", "Do you know me ", "Ello ", "Finally nice to meet you ", "Greetings ", "Hello ", "I know who you are ","Jello ", "Konichiwa ", "Lovely meeting you ", "Morning to you ", "Namaste ", "Oh, hey  ", "Pleasure to meet you ","Quite an honor to meet you ", "Really nice to meet you ", "Shalom ", "Today I welcome you ", "Unique name you've got ", "Very nice to meet you ", "Well well, finally get to meet you ", "Xylophones must be your favorite instrument then huh ","Yo ","Zero clue you were "]
 
-byes = ["Adios ", "Be safe ","Catch you later ","Don't worry, see you later ", "Eventually we'll meet again ", "Farewell ","Goodbye ","Hasta manana ", "I'll see you later", "Join me tomorrow ", "Kill it out there ", "Later ", "Meet you tomorrow ", "Nice seeing you again ", "Oh, I'll catch up with you tomorrow ", "Party with me after you're done", "Quick you gotta go ", "Really hope to see you again" , "Sayonara", "Time to go. See you around ", "Un"]
+byes = ["Adios ", "Be safe ","Catch you later ","Don't worry, see you later ", "Eventually we'll meet again ", "Farewell ","Goodbye ","Hasta manana ", "I'll see you later", "Join me tomorrow ", "Kill it out there ", "Later ", "Meet you tomorrow ", "Nice seeing you again ", "Oh, I'll catch up with you tomorrow ", "Party with me after you're done", "Quick you gotta go ", "Really hope to see you again" , "Sayonara", "Time to go. See you around ", "Unload your stuff soon. Later ", "Very nice seeing you again ", "Well, go on ", "X-rays are coming in now, see you later "]
 
 #name inputs
 first_name = input("What is your first name?: ")
