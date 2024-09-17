@@ -5,7 +5,7 @@
 #Greetings list
 greetings = ["Ahola ", "Bonjour ", "Ciao ", "Do you know me ", "Ello ", "Finally nice to meet you ", "Greetings ", "Hello ", "I know who you are ","Jello ", "Konichiwa ", "Lovely meeting you ", "Morning to you ", "Namaste ", "Oh, hey  ", "Pleasure to meet you ","Quite an honor to meet you ", "Really nice to meet you ", "Shalom ", "Today I welcome you ", "Unique name you've got ", "Very nice to meet you ", "Well well, finally get to meet you ", "Xylophones must be your favorite instrument then huh ","Yo ","Zero clue you were "]
 
-byes = ["Adios ", "Be safe ","Catch you later ","Don't worry, see you later ", "Eventually we'll meet again ", "Farewell ","Goodbye ","Hasta manana ", "I'll see you later", "Join me tomorrow ", "Kill it out there ", "Later ", "Meet you tomorrow ", "Nice seeing you again ", "Oh, I'll catch up with you tomorrow ", "Party with me after you're done", "Quick you gotta go ", "Really hope to see you again" , "Sayonara", "Time to go. See you around ", "Unload your stuff soon. Later ", "Very nice seeing you again ", "Well, go on ", "X-rays are coming in now, see you later "]
+byes = ["Adios ", "Be safe ","Catch you later ","Don't worry, see you later ", "Eventually we'll meet again ", "Farewell ","Goodbye ","Hasta manana ", "I'll see you later", "Join me tomorrow ", "Kill it out there ", "Later ", "Meet you tomorrow ", "Nice seeing you again ", "Oh, I'll catch up with you tomorrow ", "Party with me after you're done", "Quick you gotta go ", "Really hope to see you again" , "Sayonara", "Time to go. See you around ", "Unload your stuff soon. Later ", "Very nice seeing you again ", "Well, go on ", "X-rays are coming in now, see you later ", "You'll see me soon ", "Zero time left, I'll see you around "]
 
 #name inputs
 first_name = input("What is your first name?: ")
@@ -38,7 +38,7 @@ greet_message = (f'{greetings[greeting_index]}{first_name.capitalize()} {last_na
 
 #Lines may be different depending on name conditions.
 line1 = ""
-if last_name.lower()[0:1] == "q" or last_name.lower90 == 'p' or last_name.lower() == 'd':
+if last_name.lower()[0:1] == "q" or last_name.lower() == 'p' or last_name.lower() == 'd':
     line1 = f"You've been selected to {verb1.lower()} at {noun1}. "
 else:
     line1 = f"We get to {verb1.lower()} in the {noun1} today. "
@@ -55,5 +55,15 @@ if first_name.lower()[0:1] == "w" or first_name.lower() == 'i' or first_name.low
 else:
     line3 = f"Its the {noun2.lower()} from the {noun1}. Its suppose to be {adjective3.lower()} because it says \"{adjective3.upper()}\" on the label but its {adjective2}. "
 
-madlipScript = f"{greet_message} {line1}{first_name.capitalize()} how do you feel? I know you've also gone {verb2.lower()} in the mornings now. {line2}Here, I got a present for you.{line3}Don't worry its only {noun3} of {noun4} you'll get. Good luck in the {noun1} today {first_name.capitalize()}."
+i = 0
+for x in byes:
+    bye = byes[i]
+    if last_name.upper()[0:1] == bye.upper()[0:1]:
+        bye_index = i
+    i = i+1
+
+bye_message = f"{byes[bye_index]}{first_name}."
+
+print("")
+madlipScript = f"{greet_message} {line1}{first_name.capitalize()} how do you feel? I know you've also gone {verb2.lower()} in the mornings now. {line2}Here, I got a present for you.{line3}Don't worry its only {noun3} of {noun4} you'll get. Good luck in the {noun1} today {first_name.capitalize()}. {bye_message}"
 print(madlipScript)
