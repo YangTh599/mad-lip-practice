@@ -38,19 +38,19 @@ greet_message = (f'{greetings[greeting_index]}{first_name.capitalize()} {last_na
 
 #Lines may be different depending on name conditions.
 line1 = ""
-if last_name.lower()[0:1] == "q" or last_name.lower() == 'p' or last_name.lower() == 'd':
+if last_name.lower()[0:1] == "q" or last_name.lower()[0:1] == 'p' or last_name.lower()[0:1] == 'd':
     line1 = f"You've been selected to {verb1.lower()} at {noun1}. "
 else:
     line1 = f"We get to {verb1.lower()} in the {noun1} today. "
 
 line2 = ""
-if last_name.lower()[0:1] == "x" or last_name.lower() == 'a' or last_name.lower() == 's':
+if last_name.lower()[0:1] == "x" or last_name.lower()[0:1] == 'a' or last_name.lower()[0:1] == 's':
     line2 = f"Kind of crazy since the weather recently has been {adjective1.lower()}. "
 else:
     line2 = f"I don't know what you'll do when the weather starts to be {adjective1.lower()}. "
 
 line3 = ""
-if first_name.lower()[0:1] == "w" or first_name.lower() == 'i' or first_name.lower() == 'j':
+if first_name.lower()[0:1] == "w" or first_name.lower()[0:1] == 'i' or first_name.lower()[0:1] == 'j':
     line3 = f"Its the {noun2.lower()} you wanted, but in {adjective2}. Weirdly the label says \"{adjective3.upper()}\" though. "
 else:
     line3 = f"Its the {noun2.lower()} from the {noun1}. Its suppose to be {adjective3.lower()} because it says \"{adjective3.upper()}\" on the label but its {adjective2}. "
