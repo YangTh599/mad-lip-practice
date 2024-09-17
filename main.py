@@ -55,15 +55,21 @@ if first_name.lower()[0:1] == "w" or first_name.lower()[0:1] == 'i' or first_nam
 else:
     line3 = f"Its the {noun2.lower()} from the {noun1}. Its suppose to be {adjective3.lower()} because it says \"{adjective3.upper()}\" on the label but its {adjective2}. "
 
+#Bye message
+#message output is dependant on the input of the first name
 i = 0
 for x in byes:
     bye = byes[i]
     if last_name.upper()[0:1] == bye.upper()[0:1]:
         bye_index = i
     i = i+1
-
+#finalized bye message
 bye_message = f"{byes[bye_index]}{first_name.capitalize()}."
 
+#print to make space
 print("")
-madlipScript = f"{greet_message} {line1}{first_name.capitalize()} how do you feel? I know you've also gone {verb2.lower()} in the mornings now. {line2}Here, I got a present for you. {line3}Don't worry its only {noun3} of {noun4} you'll get. Good luck in the {noun1} today {first_name.capitalize()}. {bye_message}"
+
+#Full mad lib script
+madlipScript = f"{greet_message} {line1}{first_name.capitalize()} how do you feel? I know you've also gone {verb2.lower()} in the mornings now. {line2}\nHere, I got a present for you. {line3}Don't worry its only {noun3} of {noun4} you'll get. Good luck in the {noun1} today {first_name.capitalize()}. {bye_message}"
+
 print(madlipScript)
