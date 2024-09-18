@@ -38,23 +38,30 @@ noun4 = input("Enter a 2 digit number: ")
 greet_message = (f'{greetings[greeting_index]}{first_name.capitalize()} {last_name.capitalize()}.')
 
 #Lines may be different depending on name conditions.
+#Line with verb action in the place
 line1 = ""
 if last_name.lower()[0:1] == "q" or last_name.lower()[0:1] == 'p' or last_name.lower()[0:1] == 'd':
     line1 = f"You've been selected to {verb1.lower()} at {noun1}. "
+
+elif noun1.lower() == 'australia':
+    line1 = f'We get to {verb1.lower()} in the {noun1} mate. '
+
 else:
     line1 = f"We get to {verb1.lower()} in the {noun1} today. "
 
+#Line with describing the weather
 line2 = ""
 if last_name.lower()[0:1] == "x" or last_name.lower()[0:1] == 'a' or last_name.lower()[0:1] == 's':
     line2 = f"Kind of crazy since the weather recently has been {adjective1.lower()}. "
 else:
     line2 = f"I don't know what you'll do when the weather starts to be {adjective1.lower()}. "
 
+#Line with the object and it's possible colors
 line3 = ""
 if first_name.lower()[0:1] == "w" or first_name.lower()[0:1] == 'i' or first_name.lower()[0:1] == 'j':
     line3 = f"Its the {noun2.lower()} you wanted, but in {adjective2}. Weirdly the label says \"{adjective3.upper()}\" though. "
 else:
-    line3 = f"Its the {noun2.lower()} from the {noun1}. Its suppose to be {adjective3.lower()} because it says \"{adjective3.upper()}\" on the label but its {adjective2}. "
+    line3 = f"Its the {noun2.lower()} from the {noun1}. Its suppose to be {adjective2.lower()} because it says \"{adjective2.upper()}\" on the label but its {adjective3}. "
 
 #Bye message
 #message output is dependant on the input of the first name
@@ -72,5 +79,15 @@ print("")
 
 #Full mad lib script
 madlipScript = f"{greet_message} {line1}{first_name.capitalize()} how do you feel? I know you've also gone {verb2.lower()} in the mornings now. {line2}\nHere, I got a present for you. {line3}Don't worry its only {noun3} of {noun4} you'll get. Good luck in the {noun1} today {first_name.capitalize()}. {bye_message}"
+
+#Additional Story switch ups to get it random
+if first_name.lower()[0:1] == 'b' or first_name.lower()[0:1] == 'p' or last_name.lower()[0:1] == 'y':
+    madlipScript = madlipScript.replace('mornings', 'evenings')
+
+if first_name.lower()[0:1] == 'w' or last_name.lower()[0:1] == 'd' or last_name.lower()[0:1] == 'h':
+    madlipScript = madlipScript.replace('today', 'tomorrow')
+
+
+
 
 print(madlipScript)
