@@ -37,6 +37,15 @@ noun4 = input("Enter a 2 digit number: ")
 #messages set up
 greet_message = (f'{greetings[greeting_index]}{first_name.capitalize()} {last_name.capitalize()}.')
 
+if len(first_name) >= 10 and len(last_name) >= 10:
+    greet_message = greet_message+" Long name you got there "+first_name+"."
+elif len(first_name) >= 10:
+    greet_message = greet_message+" Long first name you got there "+first_name+"."
+elif len(last_name) >= 10:
+    greet_message = greet_message+" Long last name you got there "+first_name+"."
+
+
+
 #Lines may be different depending on name conditions.
 #Line with verb action in the place
 line1 = ""
@@ -44,8 +53,10 @@ if last_name.lower()[0:1] == "q" or last_name.lower()[0:1] == 'p' or last_name.l
     line1 = f"You've been selected to {verb1.lower()} at {noun1}. "
 
 elif noun1.lower() == 'australia':
-    line1 = f'We get to {verb1.lower()} in the {noun1} mate. '
+    line1 = f'We get to {verb1.lower()} in the {noun1} today mate. '
 
+elif noun1.lower() == 'ireland':
+    line1 = f'We get to {verb1.lower()} in the {noun1} today laddie. '
 else:
     line1 = f"We get to {verb1.lower()} in the {noun1} today. "
 
