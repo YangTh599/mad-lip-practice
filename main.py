@@ -51,6 +51,10 @@ elif len(last_name) >= 10:
 line1 = ""
 if last_name.lower()[0:1] == "q" or last_name.lower()[0:1] == 'p' or last_name.lower()[0:1] == 'd':
     line1 = f"You've been selected to {verb1.lower()} at {noun1}. "
+    if noun1.lower() == 'australia':
+        line1 = line1.replace('. ', "mate. ")
+    elif noun1.lower() == 'ireland':
+        line1 = line1.replace('. ', 'laddie. ')
 
 elif noun1.lower() == 'australia':
     line1 = f'We get to {verb1.lower()} in the {noun1} today mate. '
